@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Lien CDN Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dans ma valise</title>
+</head>
+<body>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html" style="margin-left: 30px;">Dans ma Valise</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <!-- Hero Banner -->
+  <div class="jumbotron text-center">
+    <h1 class="display-4"> Vous partez en voyage </h1>
+  </div>
+
+  <!-- Form -->
+  <div class="container mt-5">
+    <form id="travelForm">
+      <div class="form-group">
+        <label for="nights">Nombre de nuits :</label>
+        <input type="number" class="form-control" id="nights" name="nights" value="3" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="climate">Climat :</label>
+        <select class="form-control" id="climate" name="climate" required>
+          <option value="modere">Modéré</option>
+          <option value="chaud">Chaud</option>
+          <option value="froid">Froid</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" style="margin-top: 10px;" onclick="calculatePackingList()">Envoyer</button>
+    </form>
+  
+    <div class="result mt-4">
+      <h3 id="message"></h3>
+      <div id="packingList"></div>
+      <button class="btn btn-secondary mt-3" onclick="resetForm()">Recommencer</button>
+    </div>
+  </div>
+
+  
+  
+  
+  <!-- Script Js-->
+  <script src="script.js"></script>
+
+  <!-- Lien CDN Bootstrap Js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-jzrNh/APzNBpZx6SCt8CjUpPybILmG6EerKxxUos4qUk+0s7qUWAe9dZWi2lfEXD" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy2gD0T0k4uZl5v9pX4YNLqpeb1sWTh3V" crossorigin="anonymous"></script>
+
+</body>
+</html>
